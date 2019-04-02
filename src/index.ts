@@ -1,6 +1,7 @@
-import 'aframe'
+// import 'aframe'
 import './scss/style.scss'
 declare var AFRAME: any;
+declare var THREE: any;
 
 function main(): void {
   AFRAME.registerComponent('time-counter', {
@@ -10,9 +11,22 @@ function main(): void {
     },
     tick: function () {
       this.data.count += 1
-      this.el.setAttribute('material', 'time', this.data.count * 0.01)
+      this.el.setAttribute('material', 'time', this.data.count * 0.05)
     }
   })
+
+  AFRAME.registerComponent('rotator', {
+    schema: {},
+    init: function () {
+      this.data.count = 0
+    },
+    tick: function () {
+      this.data.count += 1
+      const currentRotation = this.el.getAttribute('rotation');
+      this.el.setAttribute('rotation', new THREE.Vector3(0, currentRotation.y + 1, 0))
+    }
+  })
+
   AFRAME.registerShader('time-gradation-shader', {
     schema: {
       time: { type: 'float', default: 0.0, is: 'uniform' }
