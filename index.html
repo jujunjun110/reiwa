@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>REIWA VR</title>
-    <script src="bundle.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"> </script>
 </head>
 
 <body>
@@ -22,11 +21,12 @@
             material="shader:standard">
         </a-entity> -->
         <a-entity obj-model="obj:#reiwa-obj;" position="0 1.6 -3" scale="1 1 1" rotation="0 0 0"
-            material="shader:time-gradation-shader; time: 0" time-counter></a-entity>
+            material="shader:time-gradation-shader; time: 0" time-counter rotator></a-entity>
 
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky>
     </a-scene>
 </body>
+<script src="bundle.js"></script>
 
 </html>
