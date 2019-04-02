@@ -6,13 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="bundle.js"></script>
+
 </head>
 
 <body>
-    <h1>welcome new era.</h1>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="reiwa-obj" src="./models/reiwa.obj"></a-asset-item>
+        </a-assets>
+        <!-- <a-gltf-model src="./models/reiwa.gltf" position="0 3.6 -3" scale="1 1 1" rotation="0 0 0"
+            material="shader:time-gradation-shader; time: 0" time-counter></a-gltf-model>
 
+        <a-entity obj-model="obj:#reiwa-obj;" position="0 1.6 -3" scale="1 1 1" rotation="0 0 0"
+            material="shader:standard">
+        </a-entity> -->
+        <a-entity obj-model="obj:#reiwa-obj;" position="0 1.6 -3" scale="1 1 1" rotation="0 0 0"
+            material="shader:time-gradation-shader; time: 0" time-counter></a-entity>
+
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
 </body>
-
-<script src="bundle.js"></script>
 
 </html>
