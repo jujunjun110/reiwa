@@ -82,4 +82,4 @@ typings/
 .dynamodb/
 
 build
-dist/bundle.js
+# dist/bundle.js
